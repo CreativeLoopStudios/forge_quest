@@ -8,7 +8,7 @@ func reset_combo():
 	combos = 0
 	hide()
 
-func _on_PlayerPhysicsBar_hitted(isHit):
+func _on_PlayerBar_hitted(isHit):
 	if isHit:
 		combos += 1
 		combo_label.set_text(str(combos) + " combos")
