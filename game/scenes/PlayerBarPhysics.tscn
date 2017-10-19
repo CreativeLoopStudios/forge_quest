@@ -97,6 +97,7 @@ _update_shape_index = 0
 
 [node name="AreaHitBar" type="Area2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.567444, 1.34784 )
 input/pickable = true
 shapes/0/shape = SubResource( 3 )
