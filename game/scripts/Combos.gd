@@ -9,6 +9,9 @@ func reset_combo():
 	hide()
 
 func _on_PlayerBar_hitted(isHit):
+	update_combo(isHit)
+
+func update_combo(isHit):
 	if isHit:
 		combos += 1
 		combo_label.set_text(str(combos) + " combos")

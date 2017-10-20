@@ -14,6 +14,3 @@ func touch():
 		emit_signal("hitted", true)
 	else:
 		emit_signal("hitted", false)
-
-func drag():
-	pass

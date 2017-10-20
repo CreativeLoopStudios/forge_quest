@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/PlayerBarPhysics.gd" type="Script" id=1]
 [ext_resource path="res://assets/playerbar.png" type="Texture" id=2]
-[ext_resource path="res://assets/arrow.png" type="Texture" id=3]
+[ext_resource path="res://assets/arrowRight.png" type="Texture" id=3]
 [ext_resource path="res://assets/black-rect.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -13,7 +13,7 @@ extents = Vector2( 31.6493, 17.5347 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.5151, 3.18665 )
+extents = Vector2( 26.5151, 5.5591 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -41,7 +41,6 @@ texture = ExtResource( 2 )
 
 [node name="Arrow" type="RigidBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -66.2804, 250.281 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -78,10 +77,9 @@ _update_shape_index = 0
 
 [node name="AreaCollider" type="Area2D" parent="Arrow"]
 
-editor/display_folded = true
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 65.9592, -1.43115 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 65.9, -0.43115 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -90,7 +88,7 @@ angular_damp = 1.0
 
 [node name="Shape" type="CollisionShape2D" parent="Arrow/AreaCollider"]
 
-transform/pos = Vector2( 65.9592, -1.43115 )
+transform/pos = Vector2( 65.9, -0.43115 )
 shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0

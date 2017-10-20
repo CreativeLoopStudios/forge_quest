@@ -2,13 +2,13 @@
 
 [ext_resource path="res://scripts/PlayerBarMoving.gd" type="Script" id=1]
 [ext_resource path="res://assets/playerbar.png" type="Texture" id=2]
-[ext_resource path="res://assets/arrow.png" type="Texture" id=3]
+[ext_resource path="res://assets/arrowRight.png" type="Texture" id=3]
 [ext_resource path="res://assets/black-rect.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.5151, 3.18665 )
+extents = Vector2( 26.5151, 6.4917 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -42,7 +42,6 @@ texture = ExtResource( 2 )
 
 [node name="Arrow" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -66, 250 )
 
 [node name="Sprite" type="Sprite" parent="Arrow"]
@@ -51,10 +50,9 @@ texture = ExtResource( 3 )
 
 [node name="AreaCollider" type="Area2D" parent="Arrow"]
 
-editor/display_folded = true
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 65.9592, -1.43115 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 65.9592, 0.56885 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -63,7 +61,7 @@ angular_damp = 1.0
 
 [node name="Shape" type="CollisionShape2D" parent="Arrow/AreaCollider"]
 
-transform/pos = Vector2( 65.9592, -1.43115 )
+transform/pos = Vector2( 65.9592, 0.56885 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0

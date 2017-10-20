@@ -12,8 +12,8 @@ func touch():
 	var areas = arrow_area_collider.get_overlapping_areas()
 	if not areas.empty():
 		emit_signal("hitted", true)
-	else:
+	elif not is_arrow_stopped():
 		emit_signal("hitted", false)
 
-func drag():
-	arrow.apply_impulse(Vector2(0, 0), Vector2(0, -800))
+	if is_arrow_stopped():
+		arrow.apply_impulse(Vector2(0, 0), Vector2(0, -800))
