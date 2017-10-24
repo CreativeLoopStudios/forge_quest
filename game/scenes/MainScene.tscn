@@ -47,7 +47,6 @@ texture = ExtResource( 5 )
 
 [node name="Combos" type="Control" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -87,8 +86,21 @@ transform/pos = Vector2( 980, 830 )
 
 transform/pos = Vector2( 562.049, 1275.46 )
 
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = true
+
 [connection signal="pressed" from="Buttons/ForgeBtn" to="InputProc" method="_on_ForgeBtn_pressed"]
 
 [connection signal="hitted" from="PlayerBar" to="Combos" method="_on_PlayerBar_hitted"]
+
+[connection signal="hitted" from="PlayerBar" to="Weapons/RawWeapon" method="_on_PlayerBar_hitted"]
+
+[connection signal="weapon_ready" from="Weapons/RawWeapon" to="." method="_on_RawWeapon_weapon_ready"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
