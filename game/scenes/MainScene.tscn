@@ -84,14 +84,7 @@ transform/pos = Vector2( 980, 830 )
 
 [node name="RawWeapon" parent="Weapons" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 562.049, 1275.46 )
-
-[node name="Timer" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 3.0
-one_shot = false
-autostart = true
+transform/pos = Vector2( 540, 1286.57 )
 
 [connection signal="pressed" from="Buttons/ForgeBtn" to="InputProc" method="_on_ForgeBtn_pressed"]
 
@@ -100,7 +93,5 @@ autostart = true
 [connection signal="hitted" from="PlayerBar" to="Weapons/RawWeapon" method="_on_PlayerBar_hitted"]
 
 [connection signal="weapon_ready" from="Weapons/RawWeapon" to="." method="_on_RawWeapon_weapon_ready"]
-
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
